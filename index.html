@@ -23,28 +23,28 @@
           </span>
           <img src="https://www.lorempixel.com/185/185/abstract" alt="avatar" />
         </div>
-        <h1>Tiago Luchtenberg</h1>
+        <h1 id="userName">Tiago Luchtenberg</h1>
         <a href="https://www.github.com/" target="_blank">
           <img src="./images/github.svg" alt="logo github" /> tiago_luch
         </a>
         <p>An instructor focused on helping people start programming for web</p>
-        <ul>
-          <li>
+        <ul id="socialMediaLinks">
+          <li class="youtube">
             <a href="https://www.youtube.com/" target="_blank">
               <img src="./images/youtube.svg" alt="logo youtube" />
             </a>
           </li>
-          <li>
+          <li class="instagram">
             <a href="https://www.instagram.com/" target="_blank">
               <img src="./images/instagram.svg" alt="logo instagram" />
             </a>
           </li>
-          <li>
+          <li class="facebook">
             <a href="https://www.facebook.com/" target="_blank">
               <img src="./images/facebook.svg" alt="logo facebook" />
             </a>
           </li>
-          <li>
+          <li class="twitter">
             <a href="https://www.twitter.com/" target="_blank">
               <img src="./images/twitter.svg" alt="logo twitter" />
             </a>
@@ -52,5 +52,27 @@
         </ul>
       </div>
     </main>
+
+    <script>
+      const linksSocialMedia = {
+        github: "rocketseat",
+        youtube: "rocketseat",
+        instagram: "rocketseat_oficial",
+        facebook: "rocketseat",
+        twitter: "rocketseat"
+      };
+
+      function changeSocialMediaLinks() {
+        for (let li of socialMediaLinks.children) {
+          let linkClass = li.getAttribute("class");
+          // Se já tiver o link-base
+          li.children[0].href += linksSocialMedia[linkClass];
+          // Outra opção, usando template string
+          li.children[0].href = `https://${linkClass}.com/${linksSocialMedia[linkClass]}`;
+        }
+      }
+
+      changeSocialMediaLinks();
+    </script>
   </body>
 </html>
