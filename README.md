@@ -57,13 +57,14 @@ console.log(novoNome); // Novo Nome
 
 Essa mudança também pode ser feita usando `.innerHTML`, a diferença é:
 
-> - `.textContent`: altera apenas o conteúdo textual. Se receber "\<b>Nome\</b>", vai mostrar "\<b>Nome\</b>". É mais rápido.
-> - `.innerHTML`: espera receber um conteúdo em HTML que será interpretado, portanto é mais lento. Se receber "\<b>Nome\</b>", vai mostrar "<b>Nome</b>". É mais rápido.
+> - `.textContent` altera apenas o conteúdo textual. Se receber "\<b>Nome\</b>", vai mostrar "\<b>Nome\</b>". É mais rápido.
+> - `.innerHTML` espera receber um conteúdo em HTML que será interpretado, portanto é mais lento. Se receber "\<b>Nome\</b>", vai mostrar "<b>Nome</b>". É mais rápido.
 
 <br>
 
 - Acessando valores de tags e filhos:
-  Usar o `id` com o "método" `.children`, pode-se então acessar os filhos passando um index como se fosse uma array.
+
+Usar o `id` com o "método" `.children`, pode-se então acessar os filhos passando um index como se fosse uma array.
 
 ```html
 <ul id="socialMediaLinks">
