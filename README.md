@@ -40,22 +40,47 @@ https://www.lorempixel.com/185/185/abstract
 ```
 
 ```js
-document.getElementById("userName").textContent = "Novo Nome"
+document.getElementById("userName").textContent = "Novo Nome";
 
 // ou
 
-userName.textContent = "Novo Nome"
+userName.textContent = "Novo Nome";
 ```
+
 Essas funções tambem retornam o valor atribuído:
 
 ```js
-let novoNome = (userName.textContent = "Novo Nome")
+let novoNome = (userName.textContent = "Novo Nome");
 
-console.log(novoNome) // Novo Nome
+console.log(novoNome); // Novo Nome
 ```
+
 Essa mudança também pode ser feita usando `.innerHTML`, a diferença é:
 
- - `.textContent`: altera apenas o conteúdo textual. Se receber "\<b>Nome\</b>", vai mostrar "\<b>Nome\</b>". É mais rápido.
+> - `.textContent`: altera apenas o conteúdo textual. Se receber "\<b>Nome\</b>", vai mostrar "\<b>Nome\</b>". É mais rápido.
+> - `.innerHTML`: espera receber um conteúdo em HTML que será interpretado, portanto é mais lento. Se receber "\<b>Nome\</b>", vai mostrar "<b>Nome</b>". É mais rápido.
 
- - `.innerHTML`: espera receber um conteúdo em HTML que será interpretado, portanto é mais lento. Se receber "\<b>Nome\</b>", vai mostrar "<b>Nome</b>". É mais rápido.
+<br>
 
+- Acessando valores de tags e filhos:
+  Usar o `id` com o "método" `.children`, pode-se então acessar os filhos passando um index como se fosse uma array.
+
+```html
+<ul id="socialMediaLinks">
+  <li class="youtube">
+    <a href="https://www.youtube.com/"> Youtube </a>
+  </li>
+  <li class="instagram">
+    <a href="https://www.instagram.com/"> Instagram </a>
+  </li>
+</ul>
+```
+
+```js
+function changeSocialMediaLinks() {
+  for (let li of socialMediaLinks.children) {
+    let classeDaTag = li.getAttribute("class");
+    li.children[0].href = `https://www.link.com`;
+  }
+}
+```
