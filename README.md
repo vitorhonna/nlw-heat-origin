@@ -15,7 +15,7 @@ Evento da Rocketseat de 18 a 24 de outubro de 2021.
 - ✅ 18/out/21 - Stage 1
 - ✅ 19/out/21 - Stage 2
 - ✅ 20/out/21 - Stage 3
-- ❌ 21/out/21 - Stage 4
+- ✅ 21/out/21 - Stage 4
 - ❌ 22/out/21 - Stage 5
 - ❌ 24/out/21 - Encerramento
 
