@@ -7,7 +7,7 @@ body {
   --black: hsl(240, 6%, 13%);
   --grey: hsl(240, 9%, 89%);
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
 
   background-color: #121214;
@@ -20,17 +20,10 @@ body {
 }
 
 main {
-  background: url(images/background.svg);
-  width: 375px;
-  height: 812px;
-
-  /* box-shadow: 0px 0px 300px hsla(240, 6%, 13%, 80%); */
-  box-shadow: 100px 0px 1000px hsl(327, 100%, 20%), -100px 0px 1000px hsl(47, 100%, 20%), 8px 6px 15px black;
-}
-
-main:hover {
-  transform: scale(1.04);
-  transition: 1.5s;
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 800px;
+  height: 100vh;
 }
 
 .container {
@@ -85,4 +78,23 @@ ul {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
+}
+
+@media (min-width: 720px) {
+  /* Estilos de tablet (720px) e desktop (960px) */
+
+  main {
+    background: url(images/background.svg);
+    width: 375px;
+    height: 812px;
+
+    /* box-shadow: 0px 0px 300px hsla(240, 6%, 13%, 80%); */
+    box-shadow: 100px 0px 1000px hsl(327, 100%, 20%),
+      -100px 0px 1000px hsl(47, 100%, 20%), 8px 6px 15px black;
+  }
+
+  main:hover {
+    transform: scale(1.04);
+    transition: 1.5s;
+  }
 }
