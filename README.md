@@ -33,7 +33,7 @@ https://www.lorempixel.com/185/185/abstract
 
 ### Javascript
 
-- Alterar o valor de uma tag usando um ID:
+- **Alterar o valor de uma tag usando um ID:**
 
 ```html
 <h1 id="userName">Nome do Usuário</h1>
@@ -62,7 +62,7 @@ Essa mudança também pode ser feita usando `.innerHTML`, a diferença é:
 
 <br>
 
-- Acessando valores de tags e filhos:
+- **Acessando valores de tags e filhos:**
 
 Usar o `id` com o "método" `.children`, pode-se então acessar os filhos passando um index como se fosse uma array.
 
@@ -83,5 +83,27 @@ function changeSocialMediaLinks() {
     let classeDaTag = li.getAttribute("class");
     li.children[0].href = `https://www.link.com`;
   }
+}
+```
+
+<br>
+
+- **Consumindo a API do github:**
+
+Passar a url para `fetch(url)` que armazenará a resposta da API. `.then` recebe esses dados e, usando uma função anônima de flecha (*arrow function*), transforma em JSON usando `.json()`. Finalmente, pode-se acessar os dados com notação de ponto (ex: `data.name`).
+
+```js
+function getGithubProfileInfo() {
+  const url = `https://api.github.com/users/${linksSocialMedia.github}`;
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      githubUserName.textContent = data.name;
+      githubUserBio.textContent = data.bio;
+      githubUserLink.href = data.html_url;
+      githubUserAvatar.src = data.avatar_url;
+      githubUserUsername.textContent = linksSocialMedia.github;
+    });
 }
 ```

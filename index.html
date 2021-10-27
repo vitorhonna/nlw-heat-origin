@@ -1,78 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-    />
-    <title>Tiago Luchtenberg - DoWhile 2021</title>
-  </head>
 
-  <body>
-    <main>
-      <div class="container">
-        <div class="avatar">
-          <span>
-            <img src="./images/selo-rocketseat.svg" alt="selo rocketseat" />
-          </span>
-          <img src="https://www.lorempixel.com/185/185/abstract" alt="avatar" />
-        </div>
-        <h1 id="userName">Tiago Luchtenberg</h1>
-        <a href="https://www.github.com/" target="_blank">
-          <img src="./images/github.svg" alt="logo github" /> tiago_luch
-        </a>
-        <p>An instructor focused on helping people start programming for web</p>
-        <ul id="socialMediaLinks">
-          <li class="youtube">
-            <a href="https://www.youtube.com/" target="_blank">
-              <img src="./images/youtube.svg" alt="logo youtube" />
-            </a>
-          </li>
-          <li class="instagram">
-            <a href="https://www.instagram.com/" target="_blank">
-              <img src="./images/instagram.svg" alt="logo instagram" />
-            </a>
-          </li>
-          <li class="facebook">
-            <a href="https://www.facebook.com/" target="_blank">
-              <img src="./images/facebook.svg" alt="logo facebook" />
-            </a>
-          </li>
-          <li class="twitter">
-            <a href="https://www.twitter.com/" target="_blank">
-              <img src="./images/twitter.svg" alt="logo twitter" />
-            </a>
-          </li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
+  <title>Tiago Luchtenberg - DoWhile 2021</title>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="avatar">
+        <span>
+          <img src="./images/selo-rocketseat.svg" alt="selo rocketseat" />
+        </span>
+        <img id="githubUserAvatar" src="https://www.lorempixel.com/185/185/abstract" alt="avatar" />
       </div>
-    </main>
+      <h1 id="githubUserName">Tiago Luchtenberg</h1>
+      <a id="githubUserLink" href="https://www.github.com/" target="_blank">
+        <img src="./images/github.svg" alt="logo github" /> 
+        <span id="githubUserUsername">tiago_luch</span>
+      </a>
+      <p id="githubUserBio">An instructor focused on helping people start programming for web</p>
+      <ul id="socialMediaLinks">
+        <li class="youtube">
+          <a href="https://www.youtube.com/" target="_blank">
+            <img src="./images/youtube.svg" alt="logo youtube" />
+          </a>
+        </li>
+        <li class="instagram">
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="./images/instagram.svg" alt="logo instagram" />
+          </a>
+        </li>
+        <li class="facebook">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="./images/facebook.svg" alt="logo facebook" />
+          </a>
+        </li>
+        <li class="twitter">
+          <a href="https://www.twitter.com/" target="_blank">
+            <img src="./images/twitter.svg" alt="logo twitter" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
 
-    <script>
-      const linksSocialMedia = {
-        github: "rocketseat",
-        youtube: "rocketseat",
-        instagram: "rocketseat_oficial",
-        facebook: "rocketseat",
-        twitter: "rocketseat"
-      };
-
-      function changeSocialMediaLinks() {
-        for (let li of socialMediaLinks.children) {
-          let linkClass = li.getAttribute("class");
-          // Se já tiver o link-base
-          li.children[0].href += linksSocialMedia[linkClass];
-          // Outra opção, usando template string
-          li.children[0].href = `https://${linkClass}.com/${linksSocialMedia[linkClass]}`;
-        }
-      }
-
-      changeSocialMediaLinks();
-    </script>
-  </body>
 </html>
